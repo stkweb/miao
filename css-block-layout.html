@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  * {
+    margin: 0;
+  }
+  div {
+    width: 600px;
+    margin: auto;
+    margin-top: 20px;
+  }
+  .a {
+    color: #ffff;
+    background-color: black;
+    margin: auto;
+    width: 600px;
+  }
+  main {
+    background-color: black;
+  }
+  .c div{
+    background-color: pink;
+    width: 180px;
+    height: 40px;
+    box-sizing: border-box;
+    border: 3px solid black;
+    margin: 0;
+    margin-bottom: 15px;
+  }
+  .c div:hover {
+    background-color: red;
+  }
+  .c div:nth-child(n+5) {
+    margin-left: 210px;
+  }
+  .c div:nth-child(n+9) {
+    margin-left: 420px;
+  }
+  .c div:nth-child(4n+5) {
+    margin-top: -220px;
+  }
+  .e {
+    overflow: hidden;
+  }
+  .e div {
+    margin: 0px;
+    border-bottom:1px dashed;
+    margin-bottom: -1px;
+  }
+  .f {
+    background-color: pink;
+    text-align: center;
+    width: 100%;
+  }
+  .f div{
+    margin: auto;
+  }
+</style>
+<body>
+  <main>
+    <div class="a">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos minima accusantium ullam hic consequuntur, at nobis. Recusandae aliquam earum nemo repellendus nesciunt debitis, tempore beatae fugit ducimus nobis corporis hic.
+    </div>
+  </main>
+  <div>
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus, porro. Nisi aut autem quam, totam doloribus vel, impedit odio deserunt assumenda repudiandae similique aliquam libero perferendis vero ex consequuntur cumque aliquid, accusamus quis ad quibusdam saepe rem. Eius harum, impedit quae consequuntur dolor libero sunt placeat maxime eveniet, possimus provident.
+  </div>
+  <div class="c">
+    <div>产品</div>
+    <div>产品</div>
+    <div>产品</div>
+    <div>产品</div>
+    <div>产品</div>
+    <div>产品</div>
+    <div>产品</div>
+    <div>产品</div>
+    <div>产品</div>
+    <div>产品</div>
+    <div>产品</div>
+    <div>产品</div>
+  </div>
+  <div class="e">
+    <div>link</div>
+    <div>link</div>
+    <div>link</div>
+    <div>link</div>
+    <div>link</div>
+  </div>
+  <div class="f">
+    <div>&#169;版权所有</div>
+    <div>本页所有布局均使用块元素</div>
+  </div>
+</body>
+</html>
