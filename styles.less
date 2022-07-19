@@ -1,0 +1,42 @@
+.a {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  background-image: url(/images/tw.png);
+  background-position: left;
+  &:active {
+    background-position: right;
+    transition:.8s steps(28);
+  }
+}
+h1 {
+  float: left;
+}
+.b {
+  width: 110px;
+  height: 130px;
+  background-image: url(images/sprite1.png);
+  // background-position: top 0px left -240px;
+  // transition:.2s steps(2);
+  // transition属性值steps的数字取决于 你要移动的最终距离除以width
+  animation: 3s rainbow infinite steps(2);
+  @keyframes rainbow {
+    0% { background-position: top 0px left 0px }
+    25% { background-position: top 0px left -240px }
+  }
+}
+
+.c {
+  width: 110px;
+  height: 130px;
+  background-image: url(images/sprite1.png);
+  // background-position: top 0px left -240px;
+  // transition:.2s steps(2);
+  // transition属性值steps的数字取决于 你要移动的最终距离除以width
+  animation: 3s rainbow infinite steps(2);
+  @keyframes rainbow {
+    0% { background-position: top 0px left 0px }
+    25% { background-position: top 0px left -240px }
+  }
+
+}
