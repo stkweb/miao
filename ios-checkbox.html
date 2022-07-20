@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+</head>
+<style>
+  /* .b:active {
+    left: 105px;
+    }
+  .b:active ~ .a {
+    background-color: #34F551;
+    border:1px solid #34F551;
+  } */
+.a {
+  height: 100px;
+  width: 200px;
+  background-color: #CDCACC;
+  transition: .8s ;
+  border-radius: 100px;
+}
+.b {
+  height: 90px;
+  width: 90px;
+  background-color: #fff;
+  border-radius: 50px;
+  position: absolute;
+  left: 14px;
+  top: 13px;
+  box-shadow: 0 0 15px -4px;
+  /* transition: .5s cubic-bezier(0.8,-0.15, 0.18, 1.11); */
+  transition: .5s cubic-bezier(0.47, 0, 0.745, 0.715);;
+
+}
+.cb1 {
+  /* 通过label绑定元素后隐藏cb1 */
+  display: none;
+}
+/* 当cb1被选中时 cb1的兄弟label中的.a变成绿色 */
+.cb1:checked ~ label >.a {
+  background-color: #65C466;
+}
+/* 当cb1被选中时 cb1的兄弟label中的.a变成left移动到113px */
+.cb1:checked ~ label >.b {
+  left: 113px;
+}
+</style>
+<body>
+  <input type="checkbox" id="cb1" class="cb1">
+  <!-- 通过（id/for）绑定checkbox和label -->
+  <label for="cb1">
+    <div class="b"></div>
+    <div class="a"></div>
+  </label>
+</body>
+</html>
