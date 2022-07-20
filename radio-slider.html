@@ -74,25 +74,33 @@
     color: #fff;
     font-size: 14px;
   }
-  .a > li {
+  .a > li:nth-child(n) {
     line-height: 42px;
     padding-left: 34px;
   }
-  .a > li:hover {
+  .a > li:nth-child(n):hover {
     background-color: #FF6700;
   }
-  .a > li:hover > ul {
-    opacity: 1;
-  }
-  .a ul{
+  /* .a > li:nth-child(n):hover > ul {
+    display: block;
+  } */
+  /* .a ul{
     background-color: #fff;
-    opacity: 0;
+    display: none;
     width: 992px;
     left: 100%;
     top: 0;
     bottom: 0;
     right: 0;
+    font-size: 0;
   }
+  .a ul li {
+    display: inline-block;
+    width: 248px;
+    height: 462px;
+    background-color: red;
+    padding: 2px 0;
+  } */
 </style>
 <body>
   <section>
@@ -112,7 +120,10 @@
     <ul class="a">
       <li>手机
         <ul>
-          <li>aaa</li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
         </ul>
       </li>
       <li>电视</li>
