@@ -6,11 +6,125 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 </head>
+<style>
+  section {
+    position: relative;
+    width: 1226px;
+    height: 460px;
+    margin: auto;
+    overflow: hidden;
+  }
+  input {
+    display: none;
+  }
+  .imgs img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0;
+    transition: all 2s;
+    /* left: 100%; */
+  }
+  .indicators {
+    right: 20px;
+    bottom: 15px;
+    position: absolute;
+    font-size: 0;
+    z-index: 10;
+  }
+  .indicators label {
+    width: 12px;
+    height: 12px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    border: 2px solid #4D4D4D;
+    box-sizing: border-box;
+    display: inline-block;
+    margin: 5px;
+  }
+  .indicators label:hover {
+    background-color: #767679;
+  }
+  input:checked:nth-child(1) ~ .imgs > img:nth-child(1),
+  input:checked:nth-child(2) ~ .imgs > img:nth-child(2),
+  input:checked:nth-child(3) ~ .imgs > img:nth-child(3) {
+    opacity: 1;
+    /* left: 0; */
+  }
+  input:checked:nth-child(1) ~ .indicators > label:nth-child(1),
+  input:checked:nth-child(2) ~ .indicators > label:nth-child(2),
+  input:checked:nth-child(3) ~ .indicators > label:nth-child(3) {
+    background-color: #767679;
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: relative;
+  }
+  ul ul {
+    position: absolute;
+  }
+  .a {
+    width: 234px;
+    height: 420px;
+    background-color: rgba(138, 135, 135, 0.5);
+    z-index: 10;
+    padding: 20px 0;
+    color: #fff;
+    font-size: 14px;
+  }
+  .a > li {
+    line-height: 42px;
+    padding-left: 34px;
+  }
+  .a > li:hover {
+    background-color: #FF6700;
+  }
+  .a > li:hover > ul {
+    opacity: 1;
+  }
+  .a ul{
+    background-color: #fff;
+    opacity: 0;
+    width: 992px;
+    left: 100%;
+    top: 0;
+    bottom: 0;
+    right: 0;
+  }
+</style>
 <body>
-  <input type="radio" id="cb1" name="rd1">
-  <input type="radio" id="cb1" name="rd1">
-  <input type="radio" id="cb1" name="rd1">
-  <input type="radio" id="cb1" name="rd1">
-  <input type="radio" id="cb1" name="rd1">
+  <section>
+      <input type="radio" id="r1-1" name="rd1" checked>
+      <input type="radio" id="r1-2" name="rd1">
+      <input type="radio" id="r1-3" name="rd1">
+    <div class="imgs">
+      <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/ce029906e8b21a65cc3ec4966e61ff7d.jpg?w=2452&h=920" alt="">
+      <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/a4a9874bfad4fe4c4592bf2e535208be.jpeg?thumb=1&w=1533&h=575&f=webp&q=90" alt="">
+      <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/36b45c624f42fa81732457e3f9773dbd.jpg?thumb=1&w=1533&h=575&f=webp&q=90" alt="">
+    </div>
+    <div class="indicators">
+      <label for="r1-1"></label>
+      <label for="r1-2"></label>
+      <label for="r1-3"></label>
+    </div>
+    <ul class="a">
+      <li>手机
+        <ul>
+          <li>aaa</li>
+        </ul>
+      </li>
+      <li>电视</li>
+      <li>笔记本 平板</li>
+      <li>出行 穿戴</li>
+      <li>耳机 音响</li>
+      <li>家电</li>
+      <li>智能 路由器</li>
+      <li>电源 配件</li>
+      <li>健康 儿童</li>
+      <li>生活 箱包</li>
+    </ul>
+  </section>
 </body>
 </html>
