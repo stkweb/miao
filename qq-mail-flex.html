@@ -20,25 +20,21 @@
     flex-flow: column wrap;
   }
   section > div:first-child {
-    flex-grow: 1;
-    flex-basis: 0;
     background-color: red;
     overflow: auto;
+    height: 150px;
   }
   section > div:nth-child(2) {
-    flex-grow: 5;
-    flex-basis: 0;
+    flex: 1 0;
     background-color: pink;
     display: flex;
   }
   section > div:nth-child(2) > div:first-child {
-    flex-grow: 1;
-    flex-basis: 0;
+    width:200px;
     background-color: #fff;
   }
   section > div:nth-child(2) > div:last-child {
-    flex-grow: 8;
-    flex-basis: 0;
+    flex: 1 0;
     background-color: pink;
   }
 </style>
