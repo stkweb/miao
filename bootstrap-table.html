@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet/less" type="text/css" href="table.less" />
+  <link rel="stylesheet/less" type="text/css" href="checkbox-table.less" />
+  <script src="https://cdn.jsdelivr.net/npm/less@4" ></script>
+  <title>Document</title>
+</head>
+<style>
+  .a {
+    display: flex;
+    flex-flow:column;
+    align-items: center;
+  }
+  span {
+    font-weight: bold;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    height: 50px;
+  }
+  input {
+    display: none;
+  }
+  .tables {
+    flex: 1 0;
+    position: relative;
+    width: 100%;
+  }
+  .tables > table {
+    margin-top: 50px;
+  }
+  .indicators {
+    top:200px;
+    display: flex;
+    /* border-right: 3px solid; */
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    gap: 30px
+  }
+  .indicators label {
+    width: 100px;
+    height: 60px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    line-height: 60px;
+    border: 1px solid #767679;
+  }
+  .indicators label:last-child {
+    line-height: 25px;
+  }
+  label:hover {
+    background-color: #767679;
+    box-shadow: 0 0 15px -5px;
+    transition: .3s;
+  }
+  input:checked:nth-child(1) ~ .indicators > label:nth-child(1),
+  input:checked:nth-child(2) ~ .indicators > label:nth-child(2),
+  input:checked:nth-child(3) ~ .indicators > label:nth-child(3),
+  input:checked:nth-child(4) ~ .indicators > label:nth-child(4),
+  input:checked:nth-child(5) ~ .indicators > label:nth-child(5),
+  input:checked:nth-child(6) ~ .indicators > label:nth-child(6),
+  input:checked:nth-child(7) ~ .indicators > label:nth-child(7),
+  input:checked:nth-child(8) ~ .indicators > label:nth-child(8),
+  input:checked:nth-child(9) ~ .indicators > label:nth-child(9) {
+    background-color: #767679;
+    box-shadow: 0 0 15px -5px;
+  }
+  input:checked:nth-child(1) ~ .tables > table:nth-child(1),
+  input:checked:nth-child(2) ~ .tables > table:nth-child(2),
+  input:checked:nth-child(3) ~ .tables > table:nth-child(3),
+  input:checked:nth-child(4) ~ .tables > table:nth-child(4),
+  input:checked:nth-child(5) ~ .tables > table:nth-child(5),
+  input:checked:nth-child(6) ~ .tables > table:nth-child(6),
+  input:checked:nth-child(7) ~ .tables > table:nth-child(7),
+  input:checked:nth-child(8) ~ .tables > table:nth-child(8),
+  input:checked:nth-child(9) ~ .tables > table:nth-child(9) {
+    opacity: 1;
+    z-index: 10;
+  }
+</style>
+<body>
+  <section class="a">
+    <input type="radio" id="r1-1" name="rd1" checked>
+    <input type="radio" id="r1-2" name="rd1">
+    <input type="radio" id="r1-3" name="rd1">
+    <input type="radio" id="r1-4" name="rd1">
+    <input type="radio" id="r1-5" name="rd1">
+    <input type="radio" id="r1-6" name="rd1">
+    <input type="radio" id="r1-7" name="rd1">
+    <input type="radio" id="r1-8" name="rd1">
+    <input type="radio" id="r1-9" name="rd1">
+    <div class="tables">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>First</th>
+            <th>Last</th>
+            <th>Handle</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+          <tr>
+            <th>2</th>
+            <td>Jacob</td>
+            <td>Last丶xuan</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <th>3</th>
+            <td>Larry the Bird</td>
+            <td>ShinyRuo</td>
+            <td>@twitter</td>
+          </tr>
+          <tr>
+            <th>4</th>
+            <td>Larry the Bird</td>
+            <td>Hanjinlong</td>
+            <td>@ins</td>
+          </tr>
+        </tbody>
+      </table>
+      <table class="table striped">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>First</th>
+            <th>Last</th>
+            <th>Handle</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+          <tr>
+            <th>2</th>
+            <td>Jacob</td>
+            <td>Last丶xuan</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <th>3</th>
+            <td>Larry the Bird</td>
+            <td>ShinyRuo</td>
+            <td>@twitter</td>
+          </tr>
+          <tr>
+            <th>4</th>
+            <td>Larry the Bird</td>
+            <td>Hanjinlong</td>
+            <td>@ins</td>
+          </tr>
+        </tbody>
+      </table>
+      <table class="table bordered">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>First</th>
+            <th>Last</th>
+            <th>Handle</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+          <tr>
+            <th>2</th>
+            <td>Jacob</td>
+            <td>Last丶xuan</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <th>3</th>
+            <td>Larry the Bird</td>
+            <td>ShinyRuo</td>
+            <td>@twitter</td>
+          </tr>
+          <tr>
+            <th>4</th>
+            <td>Larry the Bird</td>
+            <td>Hanjinlong</td>
+            <td>@ins</td>
+          </tr>
+        </tbody>
+      </table>
+      <table class="table hover">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>First</th>
+            <th>Last</th>
+            <th>Handle</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+          <tr>
+            <th>2</th>
+            <td>Jacob</td>
+            <td>Last丶xuan</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <th>3</th>
+            <td>Larry the Bird</td>
+            <td>ShinyRuo</td>
+            <td>@twitter</td>
+          </tr>
+          <tr>
+            <th>4</th>
+            <td>Larry the Bird</td>
+            <td>Hanjinlong</td>
+            <td>@ins</td>
+          </tr>
+        </tbody>
+      </table>
+      <table class="table borderless">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>First</th>
+            <th>Last</th>
+            <th>Handle</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+          <tr>
+            <th>2</th>
+            <td>Jacob</td>
+            <td>Last丶xuan</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <th>3</th>
+            <td>Larry the Bird</td>
+            <td>ShinyRuo</td>
+            <td>@twitter</td>
+          </tr>
+          <tr>
+            <th>4</th>
+            <td>Larry the Bird</td>
+            <td>Hanjinlong</td>
+            <td>@ins</td>
+          </tr>
+        </tbody>
+      </table>
+      <table class="table dark">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>First</th>
+            <th>Last</th>
+            <th>Handle</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+          <tr>
+            <th>2</th>
+            <td>Jacob</td>
+            <td>Last丶xuan</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <th>3</th>
+            <td>Larry the Bird</td>
+            <td>ShinyRuo</td>
+            <td>@twitter</td>
+          </tr>
+          <tr>
+            <th>4</th>
+            <td>Larry the Bird</td>
+            <td>Hanjinlong</td>
+            <td>@ins</td>
+          </tr>
+        </tbody>
+      </table>
+      <table class="table dark striped">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>First</th>
+            <th>Last</th>
+            <th>Handle</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+          <tr>
+            <th>2</th>
+            <td>Jacob</td>
+            <td>Last丶xuan</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <th>3</th>
+            <td>Larry the Bird</td>
+            <td>ShinyRuo</td>
+            <td>@twitter</td>
+          </tr>
+          <tr>
+            <th>4</th>
+            <td>Larry the Bird</td>
+            <td>Hanjinlong</td>
+            <td>@ins</td>
+          </tr>
+        </tbody>
+      </table>
+      <table class="table dark striped hover">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>First</th>
+            <th>Last</th>
+            <th>Handle</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+          <tr>
+            <th>2</th>
+            <td>Jacob</td>
+            <td>Last丶xuan</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <th>3</th>
+            <td>Larry the Bird</td>
+            <td>ShinyRuo</td>
+            <td>@twitter</td>
+          </tr>
+          <tr>
+            <th>4</th>
+            <td>Larry the Bird</td>
+            <td>Hanjinlong</td>
+            <td>@ins</td>
+          </tr>
+        </tbody>
+      </table>
+      <table class="table dark striped bordered">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>First</th>
+            <th>Last</th>
+            <th>Handle</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+          <tr>
+            <th>2</th>
+            <td>Jacob</td>
+            <td>Last丶xuan</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <th>3</th>
+            <td>Larry the Bird</td>
+            <td>ShinyRuo</td>
+            <td>@twitter</td>
+          </tr>
+          <tr>
+            <th>4</th>
+            <td>Larry the Bird</td>
+            <td>Hanjinlong</td>
+            <td>@ins</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- <div class="indicators">
+      <label for="r1-1">table</label>
+      <label for="r1-2">striped</label>
+      <label for="r1-3">bordered</label>
+      <label for="r1-4">dark</label>
+      <label for="r1-5">hover</label>
+      <label for="r1-6">bordered</label>
+      <label for="r1-7">borderless</label>
+      <label for="r1-8">dark hover</label>
+      <label for="r1-9">dark borderless</label>
+      <label for="r1-9">dark borderless</label>
+      <label for="r1-9">dark borderless</label>
+      <label for="r1-9">dark borderless</label>
+    </div> -->
+  </section>
+</body>
+</html>
