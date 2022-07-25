@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style type="text/less">
+  .a {
+    display: flex;
+    flex-wrap: wrap;
+    width: 150px;
+    margin: 10px 0;
+    div {
+      box-sizing: border-box;
+      width: 50px;
+      height: 50px;
+      border: 5px solid blue;
+      margin-right: -5px;
+      margin-top: -5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &:hover {
+        border-color: red;
+        z-index: 10;
+        cursor: pointer;
+      }
+    }
+  }
+  .b {
+    font-size: 0;
+    width: 150px;
+    margin: 10px 5px;
+    div {
+      position: relative;
+      font-size: 16px;
+      width: 50px;
+      height: 50px;
+      margin-left: -5px;
+      margin-bottom: -5px;
+      border: 5px solid blue;
+      box-sizing: border-box;
+      display: inline-block;
+      line-height: 40px;
+      text-align: center;
+      &:hover {
+        border-color: red;
+        cursor: pointer;
+        z-index: 10;
+      }
+      &:hover ~ div {
+        z-index: 1;
+      }
+    }
+  }
+  .c {
+    text-align: center;
+    width: 150px;
+    margin: 15px 5px;
+    div {
+      text-align: center;
+      position: relative;
+      box-sizing: border-box;
+      float: left;
+      width: 50px;
+      height: 50px;
+      margin-left: -5px;
+      margin-bottom: -5px;
+      border: 5px solid blue;
+      padding:9px 0;
+      &:hover {
+        border-color: red;
+        cursor: pointer;
+        z-index: 10;
+      }
+    }
+  }
+</style>
+<script src="https://cdn.jsdelivr.net/npm/less" ></script>
+<body>
+  display: flex
+  <section class="a">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+    <div>7</div>
+    <div>8</div>
+    <div>9</div>
+  </section>
+  display: line-block
+  <section class="b">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+    <div>7</div>
+    <div>8</div>
+    <div>9</div>
+  </section>
+  float: left
+  <section class="c">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+    <div>7</div>
+    <div>8</div>
+    <div>9</div>
+  </section>
+</body>
+</html>

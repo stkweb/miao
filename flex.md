@@ -1,4 +1,5 @@
-justify-content
+# justify-content
+*******************
   设定一"行"的元素在行中的"水平"分布
   start end center space-between space-arounda lign-items
   设定一"行"的元素在行中的"垂直"分布start-end center- baseline·stretchalign-content

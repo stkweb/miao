@@ -1,0 +1,124 @@
+  .a {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    input {
+      display: none;
+    }
+  }
+  .table{
+    width: 0;
+    text-align: none;
+    border-collapse: none;
+    border-right-color: #fff;
+    * {
+      padding: 0;
+    }
+    th:first-child {
+      width: 0;
+    }
+    tbody {
+      border-top: none;
+      tr{
+        border-bottom: none;
+      }
+    }
+  }
+  .indicators {
+    position: absolute;
+    top:200px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    gap: 30px;
+    label {
+      width: 100px;
+      height: 60px;
+      border-radius: 15px;
+      box-sizing: border-box;
+      text-align: center;
+      line-height: 60px;
+      border: 1px solid #767679;
+      &:hover {
+        box-shadow: 0 0 15px -5px;
+        transition: .3s;
+        cursor: pointer;
+      }
+      &:nth-child(n + 2){
+        display: none;
+      }
+    }
+  }
+  // input:checked:nth-child(1) ~ .table{
+  //   width: 100%;
+  //   text-align: left;
+  //   border-collapse: collapse;
+  //   border-right-color: #fff;
+  //   color: black;
+  //   * {
+  //     padding: 8px 25px;
+  //   }
+  //   th:first-child {
+  //     width: 100px;
+  //   }
+  //   tbody {
+  //     border-top: 2px solid #DEE2E6;
+  //     tr{
+  //       border-bottom: 1px solid #DEE2E6;
+  //     }
+  //   }
+  // }
+  input {
+    &:checked{
+      &:nth-child(1) ~ .indicators {
+        label {
+          display: block;
+        }
+      }
+      &:nth-child(1) ~ .table {
+        width: 100%;
+        text-align: left;
+        border-collapse: collapse;
+        border-right-color: #fff;
+        color: black;
+        * {
+          padding: 8px 25px;
+        }
+        th:first-child {
+          width: 100px;
+        }
+        tbody {
+          border-top: 2px solid #DEE2E6;
+          tr{
+            border-bottom: 1px solid #DEE2E6;
+          }
+        }
+      }
+      &:nth-child(2) ~ .table {
+        tbody {
+          tr{
+            &:nth-child(2n + 1){
+              background-color: #F2F2F2;
+            }
+          }
+        }
+      }
+      &:nth-child(3) ~ .table {
+        border: 1px solid #DEE2E6;
+        th ,td {
+          border: 1px solid #DEE2E6;
+        }
+      }
+      &:nth-child(4) ~ .table {
+        color: #fff;
+        background-color: #212529;
+        tbody {
+          border-top: 2px solid #373B3E;
+          tr{
+            border-bottom: 1px solid #373B3E;
+          }
+        }
+      }
+    }
+  }
