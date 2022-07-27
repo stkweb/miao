@@ -4,38 +4,15 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet/less" type="text/css" href="table.less" />
-  <link rel="stylesheet/less" type="text/css" href="checkbox-table.less" />
-  <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
-  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/less@4" ></script>
   <title>Document</title>
+  <link rel="stylesheet/less" type="text/css" href="/table.less" />
+  <link rel="stylesheet/less" type="text/css" href="/checkbox-table.less" />
+  <script src="https://unpkg.com/vue@next"></script>
+  <script src="https://cdn.jsdelivr.net/npm/less@4" ></script>
 </head>
-<style>
-  input:checked:nth-child(1) ~ .indicators > label:nth-child(1),
-  input:checked:nth-child(2) ~ .indicators > label:nth-child(2),
-  input:checked:nth-child(3) ~ .indicators > label:nth-child(3),
-  input:checked:nth-child(4) ~ .indicators > label:nth-child(4),
-  input:checked:nth-child(5) ~ .indicators > label:nth-child(5),
-  input:checked:nth-child(6) ~ .indicators > label:nth-child(6),
-  input:checked:nth-child(7) ~ .indicators > label:nth-child(7),
-  input:checked:nth-child(8) ~ .indicators > label:nth-child(8),
-  input:checked:nth-child(9) ~ .indicators > label:nth-child(9) {
-    background-color: #767679;
-    box-shadow: 0 0 15px -5px;
-  }
-</style>
-<script>
-  function monclick(){
-
-  }
-  axios.post('https://api.live.bilibili.com/room/v1/Room/get_info?id=13308358').then(res=>{
-    console.log(res)
-  })
-  </script>
 <body>
   <section class="a">
-    <input type="checkbox" id="r1-1" name="rd1">
+    <input type="checkbox" id="r1-1" name="rd1" v-bind:class = " ">
     <input type="checkbox" id="r1-2" name="rd1">
     <input type="checkbox" id="r1-3" name="rd1">
     <input type="checkbox" id="r1-4" name="rd1">
@@ -79,7 +56,7 @@
       </tbody>
     </table>
     <div class="indicators">
-      <label for="r1-1"><button id="r1-1" onclick="monclick()">s</button></label>
+      <label for="r1-1">table</label>
       <label for="r1-2">striped</label>
       <label for="r1-3">bordered</label>
       <label for="r1-4">dark</label>
@@ -88,5 +65,9 @@
       <label for="r1-7">borderless</label>
     </div>
   </section>
+
 </body>
 </html>
+<sceipt>
+
+</sceipt>
