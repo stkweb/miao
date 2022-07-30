@@ -477,3 +477,136 @@ header {
     }
   }
 }
+main {
+  width: 1226px;
+  margin: auto;
+  .main-guanggao {
+    > a {
+      display: block;
+      margin: 20px 0;
+      > img {
+        width: 1226px;
+      }
+    }
+  }
+  .main-main {
+    .title {
+      font-size: 22px;
+      font-weight: 200;
+      line-height: 58px;
+      color: #333;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+      .gengduo {
+        font-size: 16px;
+        vertical-align: top;
+        transition: .8s;
+        &:hover {
+          color: #ff6700;
+          > a > em {
+            background-color: #ff6700;
+          }
+        }
+        > a {
+          display: inline-block;
+          em {
+            position: relative;
+            display: inline-block;
+            vertical-align: middle;
+            margin-bottom: 5px;
+            margin-left: 2px;
+            width: 19px;
+            height: 19px;
+            border-radius: 15px;
+            background-color: #b0b0b0;
+            transition: .8s;
+            &::before {
+              position: absolute;
+              top: -19px;
+              right: 3px;
+              font-size: 12px;
+              color: #fff;
+              font-weight: bold;
+            }
+          }
+        }
+      }
+    }
+    .zhuti {
+      overflow: hidden;
+      > ul {
+        transition: .3s;
+        .left-c-1 {
+          float: left;
+          position: relative;
+          a {
+            display: block;
+            height: 614px;
+            width: 234px;
+            img {
+              height: 100%;
+            }
+          }
+        }
+        .left-c-2 {
+          background-color: #fff;
+          margin: 0 0 14px 14px;
+          float: left;
+          position: relative;
+          margin-bottom: 14px;
+          height: 300px;
+          width: 234px;
+          a {
+            display: block;
+            img {
+              height: 100%;
+            }
+          }
+        }
+        .left-c-4 {
+          background-color: #fff;
+          margin: 0 0 14px 14px;
+          float: left;
+          position: relative;
+          height: 143px;
+          margin-bottom: 14px;
+          width: 234px;
+          a {
+            display: block;
+            img {
+              height: 100%;
+            }
+          }
+        }
+        .chanpin {
+          > a {
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            > img {
+              margin: 20px;
+              width: 160px;
+            }
+            > span {
+              &:nth-child(2) {
+                font-size: 14px;
+                font-weight: 400;
+                color: #333;
+                margin-bottom: 2px;
+              }
+              &:nth-child(3) {
+                font-size: 12px;
+                color: #b0b0b0;
+                margin-bottom: 10px;
+              }
+              &:nth-child(4) {
+                color: #ff6700;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
