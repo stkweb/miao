@@ -1,0 +1,13 @@
+@font-face{
+  font-family:iconfont;
+  src:url('./fonts/mi-iconfont.ttf');
+  font-weight:400;
+  }
+.icon {
+  font-family: iconfont;
+  font-style:normal;
+}
+.iconfont-cart:before{content:"\E60C"}
+.iconfont-search:before{content:"\E616"}
+.iconfont-right:before{content:"\E621"}
+.iconfont-right-big::before{content: "\E623";}

@@ -4,7 +4,15 @@
   list-style: none;
   text-decoration: none;
   color: inherit;
-  font-family: "Helvetica Neue", "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
+}
+body {
+  background-color: #f5f5f5;
+  overflow-y: scroll;
+  font: 14px/1.5 Helvetica Neue, Helvetica, Arial, Microsoft Yahei, Hiragino Sans GB, Heiti SC, WenQuanYi Micro Hei, sans-serif;
+}
+header {
+  background-color: #fff;
+  position: relative;
 }
 header .nav {
   width: 100%;
@@ -42,28 +50,17 @@ header .nav .top .nav_right li:nth-last-child(2) a::after {
   content: none;
 }
 header .nav .top .nav_right li:nth-last-child(1) {
-  height: 40px;
   line-height: 40px;
   background-color: #424242;
   text-align: center;
-  padding-right: 10px;
-  padding-left: 30px;
+  padding: 0 20px;
   position: relative;
-  transition: 0.5s;
-}
-header .nav .top .nav_right li:nth-last-child(1)::before {
-  content: '';
-  width: 20px;
-  height: 20px;
-  background-size: cover;
-  position: absolute;
-  left: 7px;
-  top: 10px;
-  background-image: url(https://i8.mifile.cn/b2c-mimall-media/d7db56d1d850113f016c95e289e36efa.png);
+  transition: 0.5s step-end;
 }
 header .nav .top .nav_right li:nth-last-child(1):hover {
   background-color: #fff;
   transition: 0s;
+  color: #FF6700;
 }
 header .nav .top .nav_right li:nth-last-child(1):hover .xuanfu {
   height: 100px;
@@ -71,16 +68,6 @@ header .nav .top .nav_right li:nth-last-child(1):hover .xuanfu {
 }
 header .nav .top .nav_right li:nth-last-child(1):hover a {
   color: #FF6700;
-}
-header .nav .top .nav_right li:nth-last-child(1):hover::before {
-  content: '';
-  width: 20px;
-  height: 20px;
-  background-size: cover;
-  position: absolute;
-  left: 7px;
-  top: 10px;
-  background-image: url(https://i8.mifile.cn/b2c-mimall-media/692a6c3b0a93a24f74a29c0f9d68ec71.png);
 }
 header .nav .top .nav_right li:nth-last-child(1) a::after {
   content: none;
@@ -96,6 +83,7 @@ header .nav .top .xuanfu {
   box-shadow: 0 2px 10px -8px black;
   color: black;
   transition: 0.5s;
+  z-index: 20;
 }
 header .nav .top .xuanfu::before {
   content: '购物车中还没有商品，赶紧选购吧！';
@@ -106,7 +94,7 @@ header .daohang {
   margin: auto;
   height: 100px;
 }
-header .daohang div {
+header .daohang > div {
   float: left;
 }
 header .daohang .logo {
@@ -125,63 +113,330 @@ header .daohang .logo a::before {
 header .daohang .logo a:active::before {
   transform: scale(0.9);
 }
-header .daohang .daohang_main ul {
-  padding-top: 12px;
-  padding-left: 190px;
+header .daohang .daohang_main {
+  position: relative;
+}
+header .daohang .daohang_main > ul {
+  margin-top: 12px;
+  margin-left: 190px;
   display: flex;
   align-items: center;
 }
-header .daohang .daohang_main ul li {
+header .daohang .daohang_main > ul > li {
   padding: 26px 10px 38px 10px;
+  font-size: 16px;
 }
-header .daohang .daohang_main ul li:hover {
+header .daohang .daohang_main > ul > li:hover {
   color: #FF6700;
 }
-header .daohang .daohang_main ul li::before {
+header .daohang .daohang_main > ul > li:hover > ul {
+  height: 280px;
+  transition: 0.2s;
+}
+header .daohang .daohang_main > ul > li > ul {
   position: absolute;
-  width: 100%;
-  height: 590px;
-  border-top: 1px solid #e0e0e0;
-  box-shadow: 0 0 10px 10px black;
+  display: block;
+  top: 100%;
+  display: flex;
+  left: 0;
+  gap: 0px 50px;
+  overflow: hidden;
+  height: 0;
+}
+header .daohang .daohang_main > ul > li > ul > li {
+  height: 190px;
+  position: relative;
+  font-size: 12px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  flex-shrink: 0;
+  padding: 45px 0 40px;
+  width: 115px;
+  color: #FF6700;
+  transition: 0;
+}
+header .daohang .daohang_main > ul > li > ul > li::before {
+  content: '';
+  border-right: 2px solid #e0e0e0;
+  height: 90px;
+  margin: 0 10px;
+  background-color: transparent;
+  position: absolute;
+  right: -35px;
+  top: 57px;
+}
+header .daohang .daohang_main > ul > li > ul > li:last-child::before {
+  content: none;
+}
+header .daohang .daohang_main > ul > li > ul > li span {
+  padding-top: 10px;
+}
+header .daohang .daohang_main > ul > li > ul > li span:last-child {
+  padding-top: 5px;
+  color: #333333;
+}
+header .daohang .daohang_main > ul > li > ul > li > img {
+  width: 130px;
 }
 header .daohang .search {
   margin-top: 25px;
   padding-left: 50px;
+  position: relative;
+}
+header .daohang .search em {
+  font-size: 25px;
+  color: #616161;
+  line-height: 46px;
+  padding-left: 5px;
 }
 header .daohang .search form {
   display: flex;
 }
-header .daohang .search input {
+header .daohang .search form:hover input,
+header .daohang .search form:hover input ~ a {
+  border-color: #b0b0b0;
+}
+header .daohang .search form input {
   border: 1px solid #e0e0e0;
   width: 223px;
   height: 48px;
   padding: 0 10px;
   transition: 0.3s;
+  border-right: none;
 }
-header .daohang .search input:hover {
-  border-color: #b0b0b0;
-}
-header .daohang .search input:hover ~ a {
-  border-color: #b0b0b0;
-}
-header .daohang .search input:focus,
-header .daohang .search input textarea:focus {
+header .daohang .search form input:focus,
+header .daohang .search form input textarea:focus {
   outline: none;
   border-color: #ff6700;
 }
-header .daohang .search input:focus ~ a,
-header .daohang .search input textarea:focus ~ a {
+header .daohang .search form input:focus ~ a,
+header .daohang .search form input textarea:focus ~ a {
   border-color: #ff6700;
 }
-header .daohang .search a {
+header .daohang .search form input:focus ~ .select,
+header .daohang .search form input textarea:focus ~ .select {
+  opacity: 1;
+}
+header .daohang .search form .select {
+  background-color: #fff;
+  border: 1px solid #FF6700;
+  border-top: none;
+  width: 245px;
+  position: absolute;
+  top: 100%;
+  right: 51px;
+  box-sizing: border-box;
+  opacity: 0;
+  z-index: 10;
+}
+header .daohang .search form .select li {
+  font-size: 12px;
+  padding: 10px;
+}
+header .daohang .search form .select li:hover {
+  background-color: #fafafa;
+}
+header .daohang .search form .button {
   width: 38px;
   height: 46px;
   padding: 1px 6px;
   border: 1px solid #e0e0e0;
-  border-left: none;
   transition: 0.3s;
 }
-header .daohang .search a:hover {
+header .daohang .search form .button:hover {
   background-color: #FF6700;
   border-color: #FF6700;
+}
+header .daohang .search form .button:hover em {
+  color: #fff;
+}
+header .lunbo {
+  position: relative;
+  width: 1226px;
+  height: 462px;
+  margin: auto;
+  overflow: hidden;
+}
+header .lunbo input {
+  display: none;
+}
+header .lunbo input:checked:nth-child(1) ~ .imgs > a:nth-child(1) > img,
+header .lunbo input:checked:nth-child(2) ~ .imgs > a:nth-child(2) > img,
+header .lunbo input:checked:nth-child(3) ~ .imgs > a:nth-child(3) > img,
+header .lunbo input:checked:nth-child(4) ~ .imgs > a:nth-child(4) > img,
+header .lunbo input:checked:nth-child(5) ~ .imgs > a:nth-child(5) > img {
+  opacity: 1;
+}
+header .lunbo input:checked:nth-child(1) ~ .indicators > label:nth-child(1),
+header .lunbo input:checked:nth-child(2) ~ .indicators > label:nth-child(2),
+header .lunbo input:checked:nth-child(3) ~ .indicators > label:nth-child(3),
+header .lunbo input:checked:nth-child(4) ~ .indicators > label:nth-child(4),
+header .lunbo input:checked:nth-child(5) ~ .indicators > label:nth-child(5) {
+  background-color: #767679;
+}
+header .lunbo .imgs a > img {
+  width: 1226px;
+  height: 462px;
+  position: absolute;
+  opacity: 0;
+  transition: all 2s;
+}
+header .lunbo .indicators {
+  right: 20px;
+  bottom: 15px;
+  position: absolute;
+  font-size: 0;
+}
+header .lunbo .indicators > label {
+  width: 12px;
+  height: 12px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  border: 2px solid #4D4D4D;
+  box-sizing: border-box;
+  display: inline-block;
+  margin: 5px;
+}
+header .lunbo .indicators > label:hover {
+  background-color: #767679;
+  cursor: pointer;
+}
+header .lunbo .list {
+  position: relative;
+  float: left;
+}
+header .lunbo .list .a {
+  position: relative;
+  z-index: 10;
+  width: 226px;
+  height: 420px;
+  background-color: rgba(105, 101, 101, 0.6);
+  padding: 21px 0;
+  color: #fff;
+  line-height: 42px;
+  font-size: 14px;
+}
+header .lunbo .list .a > li {
+  padding-left: 30px;
+}
+header .lunbo .list .a > li:hover {
+  background-color: #FF6700;
+}
+header .lunbo .list .a > li:hover > ul {
+  display: block;
+}
+header .lunbo .list .a > li:hover::before {
+  color: hsla(0, 0%, 100%, 0.5);
+}
+header .lunbo .list .a > li::before {
+  content: '\E623';
+  color: #fff;
+  font-size: 16px;
+  position: absolute;
+  right: 10px;
+}
+header .lunbo .list .a > li > ul {
+  display: none;
+  position: absolute;
+  left: 226px;
+  top: 0;
+  height: 462px;
+  background-color: #fff;
+}
+header .lunbo .list .a > li > ul:nth-child(2) {
+  left: 476px;
+}
+header .lunbo .list .a > li > ul:nth-child(3) {
+  left: 726px;
+}
+header .lunbo .list .a > li > ul:nth-child(4) {
+  left: 976px;
+}
+header .lunbo .list .a > li > ul > li {
+  float: left;
+  width: 250px;
+}
+header .lunbo .list .a > li > ul > li a {
+  color: black;
+  padding-left: 10px;
+  line-height: 77px;
+  display: block;
+}
+header .lunbo .list .a > li > ul > li a img {
+  width: 70px;
+  vertical-align: middle;
+}
+header .lunbo .list .a > li > ul > li a:hover {
+  color: #FF6700;
+}
+header .home-hero-sub {
+  margin: auto;
+  width: 1226px;
+}
+header .home-hero-sub > div {
+  display: flex;
+  height: 170px;
+  margin-top: 15px;
+  padding-bottom: 25px;
+  gap: 0 17px;
+}
+header .home-hero-sub > div .left > ul {
+  display: flex;
+  flex-wrap: wrap;
+  width: 225px;
+}
+header .home-hero-sub > div .left > ul > li {
+  position: relative;
+  width: 75px;
+  height: 85px;
+  background-color: #5f5750;
+}
+header .home-hero-sub > div .left > ul > li a {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  flex-flow: row wrap;
+  justify-content: center;
+  color: #c3c0be;
+  gap: 4px;
+  font-size: 12px;
+  transition: 0.3s;
+}
+header .home-hero-sub > div .left > ul > li a:hover {
+  color: #fff;
+}
+header .home-hero-sub > div .left > ul > li a:hover > img {
+  opacity: 1;
+}
+header .home-hero-sub > div .left > ul > li a img {
+  width: 24px;
+  height: 24px;
+  opacity: 0.7;
+}
+header .home-hero-sub > div .left > ul > li::before {
+  content: '';
+  height: 1px;
+  width: 63px;
+  position: absolute;
+  left: 8px;
+  top: 2px;
+  background-color: #665e57;
+}
+header .home-hero-sub > div .left > ul > li::after {
+  content: '';
+  width: 1px;
+  height: 64px;
+  position: absolute;
+  left: 2px;
+  top: 13px;
+  background-color: #665e57;
+}
+header .home-hero-sub > div .right {
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-between;
+}
+header .home-hero-sub > div .right a img {
+  width: 316px;
 }
