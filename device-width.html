@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  body {
+    margin: 0;
+    background-color: #f5f5f5;
+  }
+  html {
+    /*
+    获取一个移动设备窗口尺寸
+		当设计稿是720px时
+		  html {
+		    font-size: calc(414.400 / 720 * 100);
+		  }
+		414.400是窗口尺寸
+		720是设计稿尺寸
+		得出 57.56 （ 这个数是1rem
+		在设计稿中量的一个元素的尺寸为82.88
+    82.88 / 57.56 = 1.44rem
+     */
+    font-size: calc(100vw / 720 * 100);
+  }
+  .a {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 10px;
+  }
+  .a > li {
+    width: 1.44rem;
+    height: 1.44rem;
+  }
+  .b {
+    position: relative;
+  }
+  .b > main {
+    width: 3.58rem;
+    height: 5.08rem;
+    background-color: pink;
+  }
+  img {
+    width: 100%;
+  }
+  .b > section {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 3.58rem;
+    height: 2.52rem;
+    background-color: pink;
+  }
+  .b > aside {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 3.58rem;
+    height: 2.52rem;
+    background-color: pink;
+  }
+  .c {
+    display: flex;
+    height: .43rem;
+  }
+  .c > * {
+    box-sizing: border-box;
+    border: 1px solid;
+    font-size: 14px;
+  }
+  .c > main {
+    width: 1rem;
+  }
+  .c > section {
+    width: 5.2rem;
+  }
+  .c > aside {
+    width: 1rem;
+  }
+  .d {
+    width: 7.2rem;
+    height: 200px;
+    background-color: red;
+  }
+</style>
+<body>
+  <div class="c">
+    <main>aaa</main>
+    <section></section>
+    <aside></aside>
+  </div>
+  <ul class="a">
+    <li>
+      <img src="https://i8.mifile.cn/v1/a1/eb5024fe-dfe3-6e53-3e18-675bef5fa06e.webp?w=216&h=228&bg=EAF6FD" alt="">
+    </li>
+    <li>
+      <img src="https://i8.mifile.cn/v1/a1/eb5024fe-dfe3-6e53-3e18-675bef5fa06e.webp?w=216&h=228&bg=EAF6FD" alt="">
+    </li>
+    <li>
+      <img src="https://i8.mifile.cn/v1/a1/eb5024fe-dfe3-6e53-3e18-675bef5fa06e.webp?w=216&h=228&bg=EAF6FD" alt="">
+    </li>
+    <li>
+      <img src="https://i8.mifile.cn/v1/a1/eb5024fe-dfe3-6e53-3e18-675bef5fa06e.webp?w=216&h=228&bg=EAF6FD" alt="">
+    </li>
+    <li>
+      <img src="https://i8.mifile.cn/v1/a1/eb5024fe-dfe3-6e53-3e18-675bef5fa06e.webp?w=216&h=228&bg=EAF6FD" alt="">
+    </li>
+    <li>
+      <img src="https://i8.mifile.cn/v1/a1/eb5024fe-dfe3-6e53-3e18-675bef5fa06e.webp?w=216&h=228&bg=EAF6FD" alt="">
+    </li>
+    <li>
+      <img src="https://i8.mifile.cn/v1/a1/eb5024fe-dfe3-6e53-3e18-675bef5fa06e.webp?w=216&h=228&bg=EAF6FD" alt="">
+    </li>
+    <li>
+      <img src="https://i8.mifile.cn/v1/a1/eb5024fe-dfe3-6e53-3e18-675bef5fa06e.webp?w=216&h=228&bg=EAF6FD" alt="">
+    </li>
+    <li>
+      <img src="https://i8.mifile.cn/v1/a1/eb5024fe-dfe3-6e53-3e18-675bef5fa06e.webp?w=216&h=228&bg=EAF6FD" alt="">
+    </li>
+    <li>
+      <img src="https://i8.mifile.cn/v1/a1/eb5024fe-dfe3-6e53-3e18-675bef5fa06e.webp?w=216&h=228&bg=EAF6FD" alt="">
+    </li>
+  </ul>
+  <div class="b">
+    <main>
+      <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/16305100fd7913dd727e8906b97e8998.png?f=webp&w=537&h=762&bg=DDE2E6" alt="">
+    </main>
+    <section>
+      <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/f8a28a90c3c449ba422a10e40085d2e9.png?f=webp&w=537&h=378&bg=DBDEEF" alt="">
+    </section>
+    <aside></section>
+  </div>
+  <div class="d"></div>
+</body>
+</html>

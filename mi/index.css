@@ -10,6 +10,39 @@ body {
   overflow-y: scroll;
   font: 14px/1.5 Helvetica Neue, Helvetica, Arial, Microsoft Yahei, Hiragino Sans GB, Heiti SC, WenQuanYi Micro Hei, sans-serif;
 }
+.right-window {
+  position: fixed;
+  right: 0;
+  bottom: 70px;
+  z-index: 999;
+}
+.right-window ul li {
+  width: 82px;
+  height: 90px;
+  background-color: #fff;
+  border: 1px solid #f5f5f5;
+}
+.right-window ul li:nth-child(n + 2) {
+  border-top: none;
+}
+.right-window ul li:last-child {
+  margin-top: 20px;
+  display: none;
+}
+.right-window ul li a {
+  padding: 18px 0;
+  text-align: center;
+  display: flex;
+  flex-flow: column;
+  color: #757575;
+  font-size: 14px;
+}
+.right-window ul li img {
+  margin: auto;
+  margin-bottom: 5px;
+  width: 30px;
+  height: 30px;
+}
 header {
   background-color: #fff;
   position: relative;
@@ -451,6 +484,68 @@ main .main-guanggao > a {
 main .main-guanggao > a > img {
   width: 1226px;
 }
+main .main-main > .abc-1 {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+main .main-main > .abc-1 > .abc {
+  position: relative;
+  width: 296px;
+  height: 285px;
+  background-color: #fff;
+  transition: 0.3s;
+}
+main .main-main > .abc-1 > .abc:hover {
+  position: relative;
+  transform: translate3d(0, -2px, 0);
+  transition: 0.3s;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+main .main-main > .abc-1 > .abc > a {
+  display: block;
+  height: 100%;
+  text-align: center;
+}
+main .main-main > .abc-1 > .abc > a > span {
+  display: block;
+  font-size: 14px;
+  margin-top: 20px;
+}
+main .main-main > .abc-1 > .abc > a > span > span {
+  display: block;
+  color: #b0b0b0;
+  margin-top: 10px;
+  font-size: 12px;
+}
+main .main-main > .abc-1 > .abc > a > img {
+  width: 296px;
+  transition: 0.3s;
+}
+main .main-main > .abc-1 > .abc > a > img:hover ~ em {
+  transition: 0.3s;
+  border-color: #ff6700;
+  background-color: #ff6700;
+}
+main .main-main > .abc-1 > .abc > a > em {
+  width: 31px;
+  height: 18px;
+  background-color: rgba(0, 0, 0, 0.8);
+  font-size: 40px;
+  position: absolute;
+  left: 21px;
+  top: 145px;
+  color: #fff;
+  border-radius: 30px;
+  border: 3px solid #fff;
+  transition: 0.3s;
+}
+main .main-main > .abc-1 > .abc > a > em::before {
+  position: absolute;
+  top: -14px;
+  left: 0px;
+  font-size: 32px;
+}
 main .main-main .title {
   font-size: 22px;
   font-weight: 200;
@@ -495,10 +590,19 @@ main .main-main .title .gengduo > a em::before {
   font-weight: bold;
 }
 main .main-main .zhuti {
-  overflow: hidden;
+  display: flex;
 }
 main .main-main .zhuti > ul {
   transition: 0.3s;
+}
+main .main-main .zhuti > ul > li {
+  transition: 0.3s;
+}
+main .main-main .zhuti > ul > li:hover {
+  position: relative;
+  transform: translate3d(0, -2px, 0);
+  transition: 0.3s;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
 }
 main .main-main .zhuti > ul .left-c-1 {
   float: left;
@@ -513,8 +617,8 @@ main .main-main .zhuti > ul .left-c-1 a img {
   height: 100%;
 }
 main .main-main .zhuti > ul .left-c-2 {
+  margin: 0 14px 14px 0;
   background-color: #fff;
-  margin: 0 0 14px 14px;
   float: left;
   position: relative;
   margin-bottom: 14px;
@@ -522,14 +626,15 @@ main .main-main .zhuti > ul .left-c-2 {
   width: 234px;
 }
 main .main-main .zhuti > ul .left-c-2 a {
+  height: 100%;
   display: block;
 }
 main .main-main .zhuti > ul .left-c-2 a img {
   height: 100%;
 }
 main .main-main .zhuti > ul .left-c-4 {
-  background-color: #fff;
   margin: 0 0 14px 14px;
+  background-color: #fff;
   float: left;
   position: relative;
   height: 143px;
@@ -542,26 +647,144 @@ main .main-main .zhuti > ul .left-c-4 a {
 main .main-main .zhuti > ul .left-c-4 a img {
   height: 100%;
 }
-main .main-main .zhuti > ul .chanpin > a {
+main .main-main .zhuti > ul .top {
+  margin-right: 0;
+}
+main .main-main .zhuti > ul .left-c-2.chanpin {
+  margin: 0 0 14px 14px;
+}
+main .main-main .zhuti > ul .left-c-2.chanpin > a {
+  height: auto;
   display: flex;
   flex-flow: column;
   align-items: center;
 }
-main .main-main .zhuti > ul .chanpin > a > img {
+main .main-main .zhuti > ul .left-c-2.chanpin > a > img {
   margin: 20px;
   width: 160px;
 }
-main .main-main .zhuti > ul .chanpin > a > span:nth-child(2) {
+main .main-main .zhuti > ul .left-c-2.chanpin > a > span:nth-child(2) {
   font-size: 14px;
   font-weight: 400;
   color: #333;
   margin-bottom: 2px;
 }
-main .main-main .zhuti > ul .chanpin > a > span:nth-child(3) {
+main .main-main .zhuti > ul .left-c-2.chanpin > a > span:nth-child(3) {
   font-size: 12px;
   color: #b0b0b0;
   margin-bottom: 10px;
 }
-main .main-main .zhuti > ul .chanpin > a > span:nth-child(4) {
+main .main-main .zhuti > ul .left-c-2.chanpin > a > span:nth-child(4) {
   color: #ff6700;
+}
+main .main-main .zhuti > ul .left-c-2.chanpin > a > span:nth-child(4) span {
+  color: #b0b0b0;
+  text-decoration: line-through;
+  margin-left: 5px;
+}
+main .main-main .zhuti > ul .left-c-4.chanpin {
+  margin: 0 0 14px 14px;
+}
+main .main-main .zhuti > ul .left-c-4.chanpin > a {
+  padding: 30px;
+  height: auto;
+  display: flex;
+  flex-flow: row-reverse;
+  align-items: center;
+}
+main .main-main .zhuti > ul .left-c-4.chanpin > a > img {
+  width: 80px;
+}
+main .main-main .zhuti > ul .left-c-4.chanpin > a > span {
+  display: block;
+}
+main .main-main .zhuti > ul .left-c-4.chanpin > a > span:nth-child(2) {
+  font-size: 14px;
+  font-weight: 400;
+  color: #333;
+  margin-bottom: 2px;
+}
+main .main-main .zhuti > ul .left-c-4.chanpin > a > span:nth-child(2) span {
+  display: block;
+  margin-top: 5px;
+  color: #ff6700;
+}
+main .main-main .zhuti > ul .left-c-4.more {
+  margin: 0 0 14px 14px;
+}
+main .main-main .zhuti > ul .left-c-4.more > a {
+  padding: 30px;
+  height: auto;
+  display: flex;
+  flex-flow: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+}
+main .main-main .zhuti > ul .left-c-4.more > a > span {
+  margin-top: 10px;
+  margin-left: 10px;
+  display: block;
+}
+main .main-main .zhuti > ul .left-c-4.more > a > span:nth-child(2) {
+  color: #333;
+  margin-bottom: 2px;
+}
+main .main-main .zhuti > ul .left-c-4.more > a > span:nth-child(2) span {
+  font-size: 12px;
+  display: block;
+  margin-top: 2px;
+  color: #757575;
+}
+main .main-main .zhuti > ul .left-c-4.more > a em {
+  font-size: 48px;
+  margin-left: 20px;
+  color: #ff6700;
+}
+footer {
+  background-color: #fff;
+}
+footer .footer-service {
+  width: 1226px;
+  margin: auto;
+}
+footer .footer-service > ul {
+  padding: 25px 0;
+  border-bottom: 1px solid #e0e0e0;
+  display: flex;
+  justify-content: space-between;
+}
+footer .footer-service > ul > li {
+  position: relative;
+  width: 100%;
+}
+footer .footer-service > ul > li::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 6px;
+  width: 1px;
+  height: 25px;
+  background-color: #e0e0e0;
+}
+footer .footer-service > ul > li:last-child::before {
+  content: none;
+}
+footer .footer-service > ul > li:hover > a {
+  transition: 0.2s;
+  color: #ff6700;
+}
+footer .footer-service > ul > li > a {
+  color: #616161;
+  font-size: 16px;
+  display: block;
+  text-align: center;
+  transition: 0.2s;
+}
+footer .footer-service > ul > li > a > em {
+  font-size: 24px;
+  vertical-align: -4px;
+}
+footer .footer-service > ul > li > a > span {
+  margin-left: 3px;
 }
