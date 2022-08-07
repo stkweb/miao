@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  *{
+  }
+  .qq {
+    width: 500px;
+    height: 500px;
+    margin: auto;
+    position: relative;
+    background-color: #fff;
+  }
+  img {
+    width: 200px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform:translate(-50%,-50%);
+    z-index: 18;
+  }
+  .b {
+    width: 235px;
+    height: 235px;
+    border-radius: 150px;
+    overflow: hidden;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-image: linear-gradient(to top, #209cff 0%, #68e0cf 100%);
+    transition: 10s;
+  }
+  .a:hover + .b {
+    transform: rotate(360deg);
+    transition: 10s;
+  }
+  .a:hover ~ .c {
+    transform: rotate(360deg);
+    transition: 10s;
+  }
+  .a {
+    width: 230px;
+    height: 230px;
+    border-radius: 150px;
+    overflow: hidden;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform:translate(-50%,-50%);
+    background-color: #fff;
+    z-index: 20;
+  }
+  .c {
+    width: 15px;
+    height: 15px;
+    border-radius: 25px;
+    top: 50%;
+    left: 25%;
+    overflow: hidden;
+    position: absolute;
+    transform: rotate(0deg);
+    transform-origin: 5000% 5000%;
+    background-color: #fff;
+    z-index: 19;
+  }
+</style>
+<body>
+  <div class="qq">
+      <div class="a">
+        <img src="https://cdn.staticaly.com/gh/stkweb/images@master/20220802/MN8YG]@AILG}4D_Z1D$~OHJ.2bgqs30a6vbw.webp" alt="">
+      </div>
+      <div class="b"></div>
+      <!-- <div class="c"></div> -->
+  </div>
+</body>
+</html>

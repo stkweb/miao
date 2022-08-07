@@ -1,0 +1,524 @@
+@font-face {
+  font-family: iconfont;
+  src: url(iconfont-d98ae3e51340407abacca9b700bd6b2d.woff2) format("woff2"), url(iconfont-d8a5768eb918e33d7e100ae308908fa9.woff) format("woff"), url(iconfont-45f52888f965242bcb170c4fd47bb638.ttf) format("truetype");
+}
+.iconfont {
+  font-family: iconfont!important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-menu:before {
+  content: "\e600";
+}
+.icon-cart1:before {
+  content: "\e615";
+}
+.icon-notifications:before {
+  content: '\e602';
+}
+.icon-down::before {
+  content: '\e64c';
+}
+.icon-search::before {
+  content: '\e605';
+}
+.icon-yuanquan9::before {
+  content: '\e606';
+}
+.icon-thumb-up:before {
+  content: "\e60a";
+}
+.icon-reply:before {
+  content: "\e616";
+}
+.icon-share-1:before {
+  content: "\e61f";
+}
+.icon-diandiandian:before {
+  content: "\e656";
+}
+input {
+  outline: medium;
+}
+input:focus {
+  border: none;
+}
+a {
+  text-decoration: none;
+}
+@keyframes carousel {
+  0% {
+    transform: translateX(0px);
+  }
+  10% {
+    transform: translateX(0px);
+  }
+  20% {
+    transform: translateX(-1080px);
+  }
+  30% {
+    transform: translateX(-1080px);
+  }
+  40% {
+    transform: translateX(-2160px);
+  }
+  50% {
+    transform: translateX(-2160px);
+  }
+  60% {
+    transform: translateX(-3240px);
+  }
+  70% {
+    transform: translateX(-3240px);
+  }
+  80% {
+    transform: translateX(-4320px);
+  }
+  80% {
+    transform: translateX(-4320px);
+  }
+  90% {
+    transform: translateX(-4320px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.app .nav {
+  color: rgba(255, 255, 255, 0.7);
+  display: flex;
+  padding: 5px 0;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #101010;
+}
+.app .nav > .nav-left {
+  display: flex;
+  align-items: center;
+  gap: 0 20px;
+}
+.app .nav > .nav-left > .btn {
+  background-color: transparent;
+  color: rgba(255, 255, 255, 0.7);
+  padding: 10px 20px;
+  border: none;
+  font-size: 18px;
+}
+.app .nav > .nav-left > .btn:hover {
+  color: rgba(255, 255, 255, 0.85);
+}
+.app .nav > .nav-left > .btn > i {
+  font-size: 18px;
+}
+.app .nav > .nav-left .zf-logo {
+  margin-top: 2px;
+}
+.app .nav > .nav-left .zf-logo:hover > a > img {
+  opacity: 1;
+}
+.app .nav > .nav-left .zf-logo > a {
+  display: block;
+}
+.app .nav > .nav-left .zf-logo > a > img {
+  width: 184px;
+  height: 24px;
+  opacity: 0.9;
+}
+.app .nav .search {
+  position: relative;
+  flex-grow: 1;
+  max-width: 320px;
+  margin-left: auto;
+  margin-right: 44px;
+  height: 40px;
+}
+.app .nav .search > input {
+  box-sizing: border-box;
+  padding: 0 45px;
+  border: none;
+  width: 100%;
+  height: 100%;
+  background-color: #404040;
+  border-radius: 20px;
+  font-size: 14px;
+  color: transparent;
+}
+.app .nav .search > input:focus {
+  color: #fff;
+}
+.app .nav .search > input:focus + .font > span {
+  font-size: 0;
+}
+.app .nav .search .font {
+  position: absolute;
+  top: 9px;
+  display: flex;
+  align-items: center;
+  gap: 0 10px;
+  left: 15px;
+}
+.app .nav .search .font > i {
+  font-size: 22px;
+}
+.app .nav .search .font > span {
+  font-size: 14px;
+}
+.app .nav > .nav-right {
+  margin-right: 35px;
+  display: flex;
+  align-items: center;
+}
+.app .nav > .nav-right > i {
+  font-size: 22px;
+  margin-right: 45px;
+}
+.app .nav > .nav-right .user {
+  display: flex;
+  align-items: center;
+  gap: 0 25px;
+  color: #b8b8b8;
+  font-size: 14px;
+}
+.app .nav > .nav-right .user span i {
+  font-size: 14px;
+}
+.app .nav > .nav-right .user:hover {
+  color: #dbdbdb;
+}
+.app .nav > .nav-right .user img {
+  width: 37px;
+  height: 37px;
+}
+.app main {
+  width: 1080px;
+  margin: auto;
+  overflow: hidden;
+}
+.app main .lunbo {
+  position: relative;
+  height: 407px;
+  margin-bottom: 30px;
+}
+.app main .carousel {
+  animation: carousel 25s infinite;
+  transform: translateX(0px);
+  display: flex;
+  position: absolute;
+}
+.app main .carousel > .op-1 {
+  opacity: 1;
+}
+.app main .carousel > div {
+  float: left;
+  width: 1080px;
+  height: 407px;
+}
+.app main .carousel > div > a {
+  position: relative;
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+.app main .carousel > div > a > img {
+  width: 100%;
+  height: 100%;
+}
+.app main .carousel > div > a > .font {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  top: 0;
+  display: flex;
+  flex-flow: column;
+  justify-content: end;
+  position: absolute;
+  padding: 20px 40px;
+}
+.app main .carousel > div > a > .font > span {
+  width: fit-content;
+  padding: 8px;
+  color: #fff;
+  background-color: rgba(16, 17, 23, 0.75);
+  margin-bottom: 5px;
+}
+.app main .carousel > div > a > .font > span:hover {
+  background-color: rgba(16, 17, 23, 0.9);
+}
+.app main .carousel > div > a > .font > span:nth-child(1) {
+  font-size: 32px;
+}
+.app main .carousel > div > a > .font > span:nth-child(2) {
+  font-size: 14px;
+}
+.app main .carousel > div > a > .font > div {
+  display: flex;
+  align-items: center;
+  column-gap: 5px;
+  font-size: 12px;
+  color: #fff;
+}
+.app main .carousel > div > a > .font > div img {
+  width: 42px;
+  border-radius: 40px;
+  box-shadow: 0 1px 4px -1px rgba(0, 0, 0, 0.54);
+}
+.app main .main {
+  display: flex;
+  justify-content: space-between;
+  row-gap: 50px;
+  padding: 0 15px;
+}
+.app main .main .main-left {
+  width: 620px;
+}
+.app main .main .main-left .main-tabs > ul {
+  display: flex;
+  width: 620px;
+  line-height: 50px;
+  border-bottom: 1px solid #e5e9ec;
+}
+.app main .main .main-left .main-tabs > ul > li {
+  box-sizing: border-box;
+  padding: 0 15px;
+}
+.app main .main .main-left .main-list {
+  margin-top: 10px;
+}
+.app main .main .main-left .main-list > .main-article {
+  display: flex;
+  padding: 14px 0;
+  border-bottom: 1px solid #e8edf9;
+}
+.app main .main .main-left .main-list > .main-article .left > a > img {
+  width: 48px;
+  height: 48px;
+  border-radius: 24px;
+  box-shadow: 0 1px 4px -1px rgba(0, 0, 0, 0.54);
+}
+.app main .main .main-left .main-list > .main-article .right {
+  box-sizing: border-box;
+  padding: 0 20px;
+}
+.app main .main .main-left .main-list > .main-article .right .user-line > a {
+  color: #838ead;
+  font-size: 14px;
+}
+.app main .main .main-left .main-list > .main-article .right .user-line > span {
+  position: relative;
+  margin-left: 14px;
+  font-size: 12px;
+  color: #c7ccda;
+  font-weight: 400;
+}
+.app main .main .main-left .main-list > .main-article .right .user-line > span::before {
+  content: '·';
+  position: absolute;
+  top: -1px;
+  left: -10px;
+}
+.app main .main .main-left .main-list > .main-article .right > a {
+  color: #000;
+}
+.app main .main .main-left .main-list > .main-article .right > a > div {
+  margin-bottom: 4px;
+}
+.app main .main .main-left .main-list > .main-article .right > a > .article-title {
+  max-width: 520px;
+  font-weight: 500;
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+.app main .main .main-left .main-list > .main-article .right > a > .article-text {
+  max-width: 520px;
+  font-weight: 300;
+  color: #838ead;
+  font-size: 14px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+  -webkit-line-clamp: 3;
+}
+.app main .main .main-left .main-list > .main-article .right > a > .imgs {
+  display: grid;
+  grid-template-columns: 168px 168px 168px;
+  justify-content: space-between;
+}
+.app main .main .main-left .main-list > .main-article .right > a > .imgs > img {
+  width: 168px;
+  height: 98px;
+  border-radius: 4px;
+}
+.app main .main .main-left .main-list > .main-article .right .tag {
+  margin: 10px 0 5px 0;
+  display: flex;
+}
+.app main .main .main-left .main-list > .main-article .right .tag > div {
+  display: flex;
+  align-items: center;
+  color: #5f6e99;
+  padding: 0 10px;
+  margin: 0 10px 5px 0;
+  height: 25px;
+  font-size: 12px;
+  background-color: #f2f5ff;
+  border-radius: 50px;
+  transition: 0.15s ease;
+  box-sizing: border-box;
+}
+.app main .main .main-left .main-list > .main-article .right .tag > div:hover {
+  background-color: #dbe8ff;
+  color: #002367;
+}
+.app main .main .main-left .main-list > .main-article .right .tag > div:first-child {
+  padding-left: 5px;
+}
+.app main .main .main-left .main-list > .main-article .right .tag > div:first-child > i {
+  font-size: 20px;
+  color: #02dbb4;
+}
+.app main .main .main-left .main-list > .main-article .right .toolbar {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+.app main .main .main-left .main-list > .main-article .right .toolbar > div:nth-last-child(2) {
+  position: absolute;
+  right: 30px;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  color: #b9c0d0;
+  transition: 0.15s ease;
+}
+.app main .main .main-left .main-list > .main-article .right .toolbar > div:nth-last-child(2) > i {
+  font-size: 17px;
+  margin-right: 10px;
+}
+.app main .main .main-left .main-list > .main-article .right .toolbar > div:nth-last-child(2) > span {
+  font-size: 12px;
+}
+.app main .main .main-left .main-list > .main-article .right .toolbar > div:nth-last-child(2):hover {
+  color: #42a5f5;
+}
+.app main .main .main-left .main-list > .main-article .right .toolbar .left {
+  display: flex;
+}
+.app main .main .main-left .main-list > .main-article .right .toolbar .left > div {
+  width: 120px;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  color: #b9c0d0;
+  transition: 0.15s ease;
+}
+.app main .main .main-left .main-list > .main-article .right .toolbar .left > div > i {
+  font-size: 17px;
+  margin-right: 10px;
+}
+.app main .main .main-left .main-list > .main-article .right .toolbar .left > div > span {
+  font-size: 12px;
+}
+.app main .main .main-left .main-list > .main-article .right .toolbar .left > div:hover {
+  color: #42a5f5;
+}
+.app main .main .main-left .main-list > .main-article .right .toolbar .toolbar-pa {
+  padding: 0 10px;
+  position: relative;
+  top: 2px;
+  color: #b9c0d0;
+  transition: 0.15s ease;
+}
+.app main .main .main-left .main-list > .main-article .right .toolbar .toolbar-pa > i {
+  box-sizing: border-box;
+  font-size: 17px;
+}
+.app main .main .main-left .main-list > .main-article .right .toolbar .toolbar-pa:hover {
+  color: #42a5f5;
+}
+.app main .main .main-left .main-list > .min-link-card {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 248px;
+}
+.app main .main .main-left .main-list > .min-link-card > .card-main {
+  width: 100%;
+  height: 100%;
+  padding: 15px 0 15px 15px;
+  box-sizing: border-box;
+  position: relative;
+}
+.app main .main .main-left .main-list > .min-link-card > .card-main > .card-tag {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.app main .main .main-left .main-list > .min-link-card > .card-main > .card-tag > span:first-child {
+  opacity: 0.8;
+  background-color: #000;
+  border-radius: 14px;
+  color: #fff;
+  line-height: 25px;
+  padding: 0 10px;
+  font-size: 13px;
+}
+.app main .main .main-left .main-list > .min-link-card > .card-main > .card-tag > span:nth-child(2) {
+  opacity: 0.5;
+  color: #fff;
+  font-size: 12px;
+  margin-left: 5px;
+}
+.app main .main .main-left .main-list > .min-link-card > .card-main > .card-body {
+  display: flex;
+  position: absolute;
+}
+.app main .main .main-left .main-list > .min-link-card > .card-main > .card-body > .card-body-a {
+  width: 212px;
+  padding-right: 15px;
+  display: flex;
+  flex-flow: row wrap;
+}
+.app main .main .main-left .main-list > .min-link-card > .card-main > .card-body > .card-body-a > .card-title {
+  font-size: 13px;
+  color: #fff;
+  margin: 5px 0;
+}
+.app main .main .main-left .main-list > .min-link-card > .card-main > .card-body > .card-body-a > .user {
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+.app main .main .main-left .main-list > .min-link-card > .card-main > .card-body > .card-body-a > .user span {
+  font-size: 12px;
+  margin-left: 10px;
+}
+.app main .main .main-left .main-list > .min-link-card > .card-main > .card-body > .card-body-a > .user img {
+  border-radius: 12px;
+  box-shadow: 0 1px 4px -1px rgba(0, 0, 0, 0.54);
+}
+.app main .main .main-left .main-list > .min-link-card > .background {
+  position: absolute;
+  top: -75px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  filter: blur(6px) brightness(0.9);
+  z-index: -1;
+}
+.app main .main .main-left .main-list > .min-link-card > .background > img {
+  width: 100%;
+  height: 100%;
+}
+.app main .main .main-right {
+  background-color: pink;
+  width: 310px;
+}

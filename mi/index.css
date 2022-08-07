@@ -484,6 +484,25 @@ main .main-guanggao > a {
 main .main-guanggao > a > img {
   width: 1226px;
 }
+main .main-main {
+  position: relative;
+}
+main .main-main .title-right > ul {
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #424242;
+  font-size: 16px;
+}
+main .main-main .title-right > ul > li:first-child {
+  color: #ff6700;
+  border-bottom: 2px solid #ff6700;
+}
+main .main-main .title-right > ul > li:hover {
+  color: #ff6700;
+  border-bottom: 2px solid #ff6700;
+}
 main .main-main > .abc-1 {
   display: flex;
   justify-content: space-between;
