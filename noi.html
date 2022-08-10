@@ -18,7 +18,7 @@
   var b = Number(prompt("请输入一个数字"))
   var c = Number(prompt("请输入一个数字"))
   var r = (a + b) / c
-  console.log(Number(Math.floor(r)))
+  console.log(Math.floor(r))
 </script>
 
 <script id="ch0103/04">
@@ -26,21 +26,21 @@
   var b = Number(prompt("请输入一个数字"))
   var e = a / b
   var r = a % b
-  console.log(Number(Math.floor(e)),Number(r))
+  console.log(Math.floor(e),r)
 </script>
 
 <script id="ch0103/05">
   var a = Number(prompt("请输入一个数字"))
   var b = Number(prompt("请输入一个数字"))
   var e = a / b
-  console.log(Number(e.toFixed(9)))
+  console.log(e.toFixed(9))
 </script>
 
 <script id="ch0103/06">
   var a = Number(prompt("请输入一个数字"))
   var b = Number(prompt("请输入一个数字"))
   var e = b / a * 100
-  console.log(Number(e).toFixed(3) + "%")
+  console.log(e.toFixed(3) + "%")
 </script>
 
 <script id="ch0103/07">
@@ -50,13 +50,13 @@
   var c = Number(prompt("请输入一个数字"))
   var d = Number(prompt("请输入一个数字"))
   var r = (a * (x ** 3)) + (b * (x ** 2)) + (c * x) + d
-  console.log(Number(r))
+  console.log(r)
 </script>
 
 <script id="ch0103/08">
   var a = Number(prompt("请输入一个数字"))
   var r = 5 * (a - 32) / 9
-  console.log((Number(r) + .00000).toFixed(5))
+  console.log(r.toFixed(5))
 </script>
 
 <script id="ch0103/09">
@@ -65,28 +65,28 @@
   var x = 2 * a
   var y = 2 * pi * a
   var z = pi * a**2
-  console.log((Number(x) + .0000).toFixed(4),(Number(y) + .0000).toFixed(4),(Number(z) + .0000).toFixed(4))
+  console.log(x.toFixed(4),y.toFixed(4),z.toFixed(4))
 </script>
 
 <script id="ch0103/10">
   var r1 = Number(prompt("请输入一个数字"))
   var r2 = Number(prompt("请输入一个数字"))
   var r = 1 / ((1 / r1) + (1 / r2))
-  console.log((parseFloat(r) + .00).toFixed(2))
+  console.log(r.toFixed(2))
 </script>
 
 <script id="ch0103/11">
   var a = Number(prompt("请输入一个数字"))
   var b = Number(prompt("请输入一个数字"))
   var r = a % b
-  console.log(Number(r).toFixed(4))
+  console.log(r.toFixed(4))
 </script>
 
 <script id="ch0103/12">
   var r = Number(prompt("请输入一个数字"))
   var pi = 3.14
   var v = (4 / 3) * (pi * r**3)
-  console.log(Number(v).toFixed(2))
+  console.log(v.toFixed(2))
 </script>
 
 <script id="ch0103/13">
@@ -102,7 +102,7 @@
   var r = Number(prompt("请输入一个数字"))
   var pi = 3.14159
   var v = 20 / ((pi * r * r * h) / 1000)
-  console.log(Number(Math.ceil(v)))
+  console.log(Math.ceil(v))
 </script>
 
 <script id="ch0103/15">
@@ -110,7 +110,7 @@
   var x = Number(prompt("请输入一个数字"))
   var y = Number(prompt("请输入一个数字"))
   var r = n - (y / x)
-  console.log(Number(Math.floor(r)))
+  console.log(Math.floor(r))
 </script>
 
 <script id="ch0103/16">
@@ -119,7 +119,7 @@
   var xb = Number(prompt("请输入一个数字"))
   var yb = Number(prompt("请输入一个数字"))
   var r = Math.sqrt((xa - xb)**2 + (ya - yb)**2)
-  console.log(Number(r.toFixed(3)))
+  console.log(r.toFixed(3))
 </script>
 
 <script id="ch0103/17">
@@ -133,8 +133,8 @@
   var r2 = Math.sqrt((x1 - x3)**2 + (y1 - y3)**2)
   var r3 = Math.sqrt((x2 - x3)**2 + (y2 - y3)**2)
   var s = (r1 + r2 + r3) / 2
-  var a = Math.sqrt(s * ((s-r1) * (s - r2) * (s - r3)))
-  console.log((Number(a) + .00).toFixed(2))
+  var a = Math.sqrt(s * ((s - r1) * (s - r2) * (s - r3)))
+  console.log(a.toFixed(2))
 </script>
 
 <script id="ch0103/18">
@@ -143,20 +143,20 @@
   var n = Number(prompt("请输入一个数字"))
   var d = a2 -a1
   var v = a1 + (n - 1) * d
-  console.log(Number(v))
+  console.log(v)
 </script>
 
 <script id="ch0103/19">
   var a = Number(prompt("请输入一个数字"))
   var b = Number(prompt("请输入一个数字"))
   var r = a * b
-  console.log(Number(r))
+  console.log(r)
 </script>
 
 <script id="ch0103/20">
   var n = Number(prompt("请输入一个数字"))
   var r = 2 ** n
-  console.log(Number(r))
+  console.log(r)
 </script>
 
 <script id="ch0104/01">
@@ -200,11 +200,9 @@
   var y = Number(prompt("请输入一个字符"))
   if(x > y) {
     console.log(">")
-  }
-  else if (x = y){
+  }else if (x = y){
     console.log("=")
-  }
-  else if (x < y){
+  }else if (x < y){
         console.log("<")
   }
 </script>
@@ -213,8 +211,7 @@
   var x = Number(prompt("请输入一个字符"))
   if(x > 10 && x <= 100) {
     console.log(1)
-  }
-  else{
+  }else{
     console.log(0)
   }
 </script>
@@ -224,8 +221,7 @@
   var y = Number(prompt("请输入一个字符"))
   if(x > 10 || y > 20) {
     console.log(1)
-  }
-  else{
+  }else{
     console.log(0)
   }
 </script>
@@ -234,8 +230,7 @@
   var x = Number(prompt("请输入一个字符"))
   if(x % 3 === 0 && x % 5 === 0) {
     console.log("YES")
-  }
-  else{
+  }else{
     console.log("NO")
   }
 </script>
@@ -244,26 +239,19 @@
   var x = Number(prompt("请输入一个字符"))
   if(x % 3 === 0 && x % 5 === 0 && x % 7 === 0) {
     console.log(3,5,7)
-  }
-  else if(x % 3 === 0 && x % 5 === 0) {
+  }else if(x % 3 === 0 && x % 5 === 0) {
     console.log(3,5)
-  }
-  else if(x % 3 === 0 && x % 7 === 0) {
+  }else if(x % 3 === 0 && x % 7 === 0) {
     console.log(3,7)
-  }
-  else if(x % 5 === 0 && x % 7 === 0) {
+  }else if(x % 5 === 0 && x % 7 === 0) {
     console.log(5,7)
-  }
-  else if(x % 3 === 0) {
+  }else if(x % 3 === 0) {
     console.log(3)
-  }
-  else if(x % 5 === 0) {
+  }else if(x % 5 === 0) {
     console.log(5)
-  }
-  else if(x % 7 === 0) {
+  }else if(x % 7 === 0) {
     console.log(7)
-  }
-  else {
+  }else {
     console.log('n')
   }
 </script>
@@ -273,8 +261,7 @@
   var y = Number(prompt("请输入一个字符"))
   if(x < 60 || y < 60) {
     console.log(1)
-  }
-  else{
+  }else {
     console.log(0)
   }
 </script>
@@ -283,8 +270,7 @@
   var x = Number(prompt("请输入一个字符"))
   if(x === 1 || x === 3 || x === 5) {
     console.log("NO")
-  }
-  else{
+  }else {
     console.log("YES")
   }
 </script>
@@ -295,11 +281,9 @@
   var b = x / 1.2
   if(a > b) {
     console.log("Walk")
-  }
-  else if (a < b){
+  }else if(a < b) {
     console.log("Bike")
-  }
-  else if (a = b){
+  }else if(a = b) {
     console.log("All")
   }
 </script>
@@ -308,11 +292,9 @@
   var x = Number(prompt("请输入一个字符"))
   if(0 <= x < 5) {
     var y = -x + 2.5
-  }
-  else if (5 <= x < 10){
+  }else if(5 <= x < 10) {
     var y = 2 - 1.5 * ((x-3)**2)
-  }
-  else if (10 <= x < 20){
+  }else if(10 <= x < 20) {
     var y = x / 2 - 1.5
   }
   console.log(y.toFixed(3))
@@ -324,16 +306,14 @@
   if( y === "y"){
     if(x <= 1000) {
       console.log(8 + 5)
-    }
-    else{
+    }else{
       console.log(Math.ceil((x - 1000) / 500) * 4 + 8 + 5)
     }
   }
   else{
     if(x <= 1000) {
       console.log(8)
-    }
-    else{
+    }else{
       console.log(Math.ceil((x - 1000) / 500) * 4 + 8)
     }
   }
@@ -352,8 +332,7 @@
   var c = Number(prompt("请输入一个字符"))
   if(a < b + c || b < a + c || c < a + b) {
     console.log("yes")
-  }
-  else{
+  }else{
     console.log("no")
   }
 </script>
@@ -362,8 +341,7 @@
   var a = Number(prompt("请输入一个字符"))
   if(a % 4 === 0 && (a % 100 === 0 || a % 400 != 0)) {
     console.log("Y")
-  }
-  else{
+  }else{
     console.log("N")
   }
 </script>
@@ -373,8 +351,7 @@
   var y = Number(prompt("请输入一个字符"))
   if((x => -1 && x <= 1) && (y => -1 && y <= 1)){
     console.log("yes")
-  }
-  else {
+  }else {
     console.log('no')
   }
 </script>
@@ -382,12 +359,71 @@
 <script id="ch0104/19">
   var a = Number(prompt("请输入一个数字"))
   var b = Number(prompt("请输入一个数字"))
-  var c = Number(prompt("请输入一个字符（+,-,*,/）"))
-  console.log(a,b,(c).toString)
-  if(c === '+' || c === '-' || c === '*' || c === '/') {
-    console.log(a + Number(c) + b)
-  }
-  else {
+  var c = prompt("请输入一个字符（+,-,*,/）")
+  if(c === '+'){
+    console.log(a + b)
+  }else if(c === '-'){
+    console.log(a - b)
+  }else if(c === '*'){
+    console.log(a * b)
+  }else if(c === '/'){
+    if (a / b === 0){
+    console.log("Divided by zero!")
+    }else{
+      console.log(a / b)
+    }
+  }else{
     console.log("Invalid operator!")
+  }
+</script>
+
+<script id="ch0104/20">
+  var a = Number(prompt("请输入一个字符"))
+  var b = Number(prompt("请输入一个字符"))
+  var c = Number(prompt("请输入一个字符"))
+  var x1 = (-b + Math.sqrt(b**2) - (4 * a * c) / 2 * a)
+  var x2 = (-b - Math.sqrt(b**2) - (4 * a * c) / 2 * a)
+  var d = -b / (2 * a)
+  var e = Math.sqrt(4 * a * c - b**2) / (2 * a)
+  if (a > 0){
+    if(b**2 === 4 * a * c) {
+      console.log("x1=x2=" + x1.toFixed(5))
+    }
+    else if(b**2 > 4 * a * c) {
+    console.log("x1="+ x1.toFixed(5) +"x2=" + x2.toFixed(5) + ",其中x1>x2")
+    }
+    else if(b**2 < 4 * a * c) {
+      console.log("x1=" + d.toFixed(5) + "+" + e.toFixed(5)+ "i"  + ";x2=" + d.toFixed(5) + "-" + e.toFixed(5) + "i")
+    }
+  }
+</script>
+
+<script id="ch0104/21">
+  var n = Number(prompt("请输入一个字符"))
+  var x = Number(prompt("请输入一个字符"))
+  var y = Number(prompt("请输入一个字符"))
+  console.log(n - Math.ceil(y / x))
+</script>
+
+<script id="ch0105/01">
+  var a = Number(prompt("请输入一个字符"))
+  var b = Number(prompt("请输入一个字符"))
+  var c = Number(prompt("请输入一个字符"))
+  var r = (b + c) / a
+  console.log(r.toFixed(2))
+</script>
+
+<script>
+  var i;
+  for(i = 0; i <= 5; i++){
+    console.log(i)
+  }
+</script>
+
+
+<script>
+  var theNumber = Number(prompt("aaa",""))
+  if (!isNaN(theNumber)){
+    alert("your number is the square root of" + theNumber * theNumber)
   }
 </script>
