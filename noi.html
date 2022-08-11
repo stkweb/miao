@@ -259,7 +259,7 @@
 <script id="ch0104/10">
   var x = Number(prompt("请输入一个字符"))
   var y = Number(prompt("请输入一个字符"))
-  if(x < 60 || y < 60) {
+  if(x < 60 && y >= 60 || x >= 60 && y < 60) {
     console.log(1)
   }else {
     console.log(0)
@@ -290,13 +290,23 @@
 
 <script id="ch0104/13">
   var x = Number(prompt("请输入一个字符"))
-  if(0 <= x < 5) {
+  // if(0 <= x && x < 5) {
+  //   var y = -x + 2.5
+  // }else if(5 <= x && x < 10) {
+  //   var y = 2 - 1.5 * ((x-3)**2)
+  // }else if(10 <= x && x < 20) {
+  //   var y = x / 2 - 1.5
+  // }
+  if (x >= 0 && x < 5){
     var y = -x + 2.5
-  }else if(5 <= x < 10) {
+  }
+  if (x >= 5 && x < 10){
     var y = 2 - 1.5 * ((x-3)**2)
-  }else if(10 <= x < 20) {
+  }
+  if (x >= 10 && x < 20){
     var y = x / 2 - 1.5
   }
+
   console.log(y.toFixed(3))
 </script>
 
@@ -406,24 +416,13 @@
 </script>
 
 <script id="ch0105/01">
-  var a = Number(prompt("请输入一个字符"))
-  var b = Number(prompt("请输入一个字符"))
-  var c = Number(prompt("请输入一个字符"))
-  var r = (b + c) / a
-  console.log(r.toFixed(2))
-</script>
-
-<script>
-  var i;
-  for(i = 0; i <= 5; i++){
-    console.log(i)
-  }
-</script>
-
-
-<script>
-  var theNumber = Number(prompt("aaa",""))
-  if (!isNaN(theNumber)){
-    alert("your number is the square root of" + theNumber * theNumber)
+  var a = Number(prompt("输入人数"))
+  var sum = []
+  for (var i = 0; i < a; i++) {
+    var b = Number(prompt("请输入一个字符"))
+    sum.push(b)
+    for(var d = 0;i < sum.length; d++){
+      console.log(sum[c])
+    }
   }
 </script>

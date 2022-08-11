@@ -10,3 +10,5 @@ let aaa: string = "bob";
 
 
 // 模板字符串
+let age: number = 20;
+let test:string = `这是一段话${age}`
