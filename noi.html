@@ -1217,13 +1217,48 @@
 </script>
 
 
-<script>
-  function weekday(y,m) {
-    var y = y - 1
-    var days = y * 365 + Math.floor(y / 4)
-
-    for (var i = 1; i <= y; i++) {
-
+<script id="weekday">
+  function isLeapYear (year) {
+    if (year % 4 == 0) {
+      return true
     }
+    if (year % 100 == 0) {
+      return false
+    }
+    if (year % 400 == 0) {
+      return true
+    }
+  }
+  function getMonthDay(year,month) {
+    switch (month) {
+      case 2:
+        if (isLeapYear(year)) {
+          return 29
+        } else {
+          return 28
+        }
+      case 1:
+      case 3:
+      case 5:
+      case 7:
+      case 8:
+      case 10:
+      case 12:
+        return 31
+      default:
+        return 30
+    }
+
+  }
+
+  function weekday(year,month) {
+    var y = year - 1
+    var days = y * 365 + Math.floor(y / 4) - Math.floor(y / 100) + Math.floor(y / 400)
+
+    for (var i = 1; i <= month; i++) {
+      days += getMonthDay(year,i)
+    }
+    days++
+    return days % 7
   }
 </script>
