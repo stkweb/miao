@@ -524,11 +524,13 @@
 <script id="ch0105/08">
   var sideCount = Number(prompt())
   var totalDegree = (sideCount - 2) * 180
-  for (var i = 0; i < n; i = i + 1){
+  var knownDegreeSum = 0
+  for (var i = 0; i < sideCount; i = i + 1){
     var degree = Number(prompt())
     totalDegree = totalDegree - degree
   }
-  console.log(totalDegree)
+  var result = totalDegree - knownDegreeSum
+  console.log(result)
 </script>
 
 <script id="ch0105/09">
@@ -659,16 +661,16 @@
 
 <script id="ch0105/18">
   var n = +prompt('')
-  var x = +prompt('')
-  var y = +prompt('')
-  var j = (x / y) * 100
+  var baseTotal = +prompt('')
+  var baseEffect = +prompt('')
+  var baseEffectRatio = (baseEffect / baseTotal) * 100
   for (var i = 1; i < n; i++) {
-    var a = +prompt('')
-    var b = +prompt('')
-    var k = (a / b) * 100
-    if (k - j > 5) {
+    var total = +prompt('')
+    var effect = +prompt('')
+    var ratio = (effect / total) * 100
+    if (ratio - baseEffectRatio > 5) {
       console.log('better')
-    } else if (k - j < 5){
+    } else if (baseEffectRatio - ratio > 5){
       console.log('worse')
     } else {
       console.log('same')
@@ -892,6 +894,72 @@
   console.log(count)
 </script>
 
+<script id="narcissistic">
+  function digitWidth(n) {
+    var w = 0
+    do {
+      var ge = n % 10
+      w++
+      n = (n - ge) / 10
+    } while (n > 0)
+
+    return w
+  }
+
+  function isNarcissistic(n) {
+    var width = digitWidth(n)
+    var sum = 0
+    var m = n
+    do {
+      var ge = n % 10
+      sum += Math.pow(ge,width)
+      n = (n - ge) / 10
+    } while (n > 0)
+    if (sum === m) {
+      return console.log("YES")
+    } else {
+      return console.log('NO')
+    }
+  }
+  var n = +prompt()
+  isNarcissistic(n)
+</script>
+
+<script id="narcissistics">
+  function digitWidth(n) {
+    var w = 0
+    do {
+      var ge = n % 10
+      w++
+      n = (n - ge) / 10
+    } while (n > 0)
+
+    return w
+  }
+  function isNarcissistic(n) {
+    var width = digitWidth(n)
+    var sum = 0
+    var m = n
+    do {
+      var ge = n % 10
+      sum += Math.pow(ge,width)
+      n = (n - ge) / 10
+    } while (n > 0)
+    if (sum === m) {
+      return console.log(m)
+    } else {
+      return
+    }
+  }
+  function narcissistics10000(num) {
+    for (var n = 1; n <= num; n++) {
+      isNarcissistic(n)
+    }
+  }
+  var num = +prompt()
+  narcissistics10000(num)
+</script>
+
 <script id="ch0105/27">
   var k = +prompt('')
   var si = 1
@@ -1066,33 +1134,115 @@
   }
   console.log(sum.toFixed(10))
 </script>
-
+<script id='ch0105/38'>
+  var n = +prompt()
+  for(let i = 1; i <= n; i++) {
+    var m = +prompt()
+    var M = m
+    if (m == 0) {
+      var c = +prompt()
+      console.log(0)
+    } else {
+      for (let j = 0; j <= M; j++) {
+        var c = +prompt()
+        if (j !== M) {
+          console.log(c * m)
+        }
+        m--
+      }
+    }
+  }
+</script>
 <script id="ch0105/39">
   var n = +prompt()
   var sum = 0
-  for (var i = 0; i < n; i++) {
+  for(var i = 1; i < n; i++) {
     if (i % 7 !== 0) {
-      sum += i * i
-    } else {
-       do {
-        var ge = n % 10
-        n = (n - ge) / 10
-        if (ge != 7) {
-          sum += i * i
+      var no7 = false
+      var j = i
+      while (j > 0) {
+        var d = j % 10
+        if (d ==  7) {
+          no7 = true
+          break
         }
-      } while (n > 0)
+        j = (j - d) / 10
+      }
+      if (!no7) {
+        sum += i * i
+      }
     }
   }
   console.log(sum)
 </script>
 
+
+<script id="ch0105/40">
+  var n = +prompt()
+  var count = 0
+
+  for (var i = 1; i <= n; i++) {
+    let x = i
+    while (x > 0) {
+      var d = x % 10
+      if (d == 1) {
+        count++
+      }
+      x = (x - d) / 10
+    }
+  }
+  console.log(count)
+</script>
+
+<script id="ch0105/41">
+  var start = +prompt()
+  var end = +prompt()
+  var count = 0
+  for (var i = start; i <= end; i++) {
+    var x = i
+
+    while (x > 0) {
+      var d = x % 10
+      if (d == 2) {
+        count++
+      }
+      x = (x - d) / 10
+    }
+  }
+  console.log(count)
+</script>
+
+<script id="ch0105/42">
+  var h = +prompt()
+  var w = +prompt()
+  var char = prompt()
+  var fill = +prompt()
+  var edgeLine = char
+  var midLine = char
+  for(var i = 1; i < w - 1; i++) {
+    edgeLine += char
+    if (fill) {
+      midLine += char
+    } else {
+      midLine += ' '
+    }
+  }
+  edgeLine += char
+  midLine += char
+  var result = edgeLine + '\n'
+  for (var j = 1; j < h - 1; j++) {
+    result += midLine + '\n'
+  }
+  result += edgeLine
+  console.log(result)
+</script>
 <script id="ch0105/45" >
   // 输入n
   var n = +prompt()
   // 总金币
   var sum = 0
   // 当前阶段金币的的数量
-  var day = 0
+  var days = 0
   // 当前阶段的金币数量
   var coins = 1
   // 循环n天 每天的总金币加上今天应该收到的金币数量 coins 天数+1
@@ -1109,6 +1259,16 @@
   console.log(sum)
 </script>
 
+
+<script id="ch0105/43">
+  var n = +prompt()
+  for (var i = 2; i < n; i++) {
+    if (n % i == 0) {
+      console.log(n / i)
+      break
+    }
+  }
+</script>
 <script id="ch0105/44">
   var n = +prompt()
   var count = 0
@@ -1130,7 +1290,25 @@
   }
 </script>
 
+<script id="palindrom">
+  function isPalindrom(n) {
+    let str = ''
+    let m = n
+    do {
+      let ge = n % 10
+      str += ge
+      n = (n - ge) / 10
+    } while (n > 0)
 
+    if (Number(str) == m) {
+      return console.log("YES")
+    } else {
+      return console.log("NO")
+    }
+  }
+  var n = +prompt()
+  isPalindrom(n)
+</script>
 
 <script>
   // 定义空的字符串准备存入每次循环的内容
@@ -1218,6 +1396,10 @@
 
 
 <script id="weekday">
+  var year = Number(prompt())
+  var month = Number(prompt())
+
+  // 判断输入的年份是否为闰年
   function isLeapYear (year) {
     if (year % 4 == 0) {
       return true
@@ -1228,7 +1410,9 @@
     if (year % 400 == 0) {
       return true
     }
+    return false
   }
+  // 判断该年的 month是多少天
   function getMonthDay(year,month) {
     switch (month) {
       case 2:
@@ -1250,15 +1434,216 @@
     }
 
   }
-
   function weekday(year,month) {
+    // 输入年份 例如 2022年 需要算2022-1的年 因为累加前面的年份再累加当年1月到month的天数
     var y = year - 1
+    // 年份 * 365 + 能被4整除的年份是闰年 - 能被100整除的年份不是润年 + 能被400整除的年份是闰年
     var days = y * 365 + Math.floor(y / 4) - Math.floor(y / 100) + Math.floor(y / 400)
-
-    for (var i = 1; i <= month; i++) {
+    // 循环累加1-month月份的天数    getMonthDay是判断i月为多少天
+    for (var i = 1; i < month; i++) {
       days += getMonthDay(year,i)
     }
     days++
     return days % 7
   }
+  console.log(weekday(year,month))
+</script>
+
+
+<script id="sqrt">
+  function sqrt(n) {
+    var low = 0
+    var high = Math.max(n, 2)
+
+    while (high - low > 0.000000001) {
+      var middle = (low + high) / 2
+      // 如果middle大于根号n
+      if (middle * middle > n) {
+        // 说明根号n在0到middle之间
+        high = middle
+      // 如果middle小于根号n
+      } else if (middle * middle < n) {
+        // 说明根号n在middle到high之间
+        low = middle
+      } else if (middle * middle == n) {
+        return middle
+      }
+    }
+    return (high + low) / 2
+  }
+  var n = +prompt()
+  console.log(sqrt(n).toFixed(3))
+</script>
+
+
+<script>
+  var newArr = [0,1,2,3,4,5,6,7,8,9,10]
+  var target = 3
+  var arrLeft = newArr[0]
+  var arrRight = newArr[newArr.length - 1]
+  while (middle != target) {
+    var middle = (arrLeft + arrRight) / 2
+    if(middle > target) {
+      arrRight = middle - 1
+    } else if (middle < target) {
+      arrLeft = middle
+    } else if (middle == target) {
+      console.log(middle)
+      break
+    }
+  }
+</script>
+
+
+<script id="complete-number">
+  function isCompleteNumber(n) {
+    let sum = 0
+    for (let i = 1; i <= n / 2; i++) {
+      if (n % i === 0) {
+        sum += i
+      }
+    }
+    if (sum === n) {
+      return console.log('YES')
+    } else {
+      return console.log('NO')
+    }
+  }
+  var n = +prompt()
+  isCompleteNumber(n)
+</script>
+
+
+<script id="complete-numbers">
+  function isCompleteNumber(n) {
+    let sum = 0
+    for (let i = 1; i <= n / 2; i++) {
+      if (n % i === 0) {
+        sum += i
+      }
+    }
+    if (sum === n) {
+      return true
+    } else {
+      return false
+    }
+  }
+  for (let i = 1; i < 1000; i++) {
+    if(isCompleteNumber(i)) {
+      console.log(i)
+    }
+  }
+</script>
+
+
+<script id="prime">
+  function isPrime(n) {
+    if (n == 1) {
+      return console.log("NO")
+    } else {
+      for (let i = 2; i < n; i++) {
+        if (n % i == 0) {
+          return console.log("NO")
+        }
+      }
+    }
+  return console.log("YES")
+  }
+  var n = +prompt()
+  isPrime(n)
+</script>
+<script id="primes">
+  function isPrime(n) {
+    if (n == 1) {
+      return
+    } else {
+      for (let i = 2; i < n; i++) {
+        if (n % i == 0) {
+          return
+        }
+      }
+    }
+  return console.log(n)
+  }
+  for (var n = 1; n <= 100; n++) {
+    isPrime(n)
+  }
+</script>
+
+
+<script id="itob">
+  function numberToChar(ge) {
+    var c = ''
+    if (ge == 0) {
+      c = '0'
+    }
+    if (ge == 1) {
+      c = '1'
+    }
+    if (ge == 2) {
+      c = '2'
+    }
+    if (ge == 3) {
+      c = '3'
+    }
+    if (ge == 4) {
+      c = '4'
+    }
+    if (ge == 5) {
+      c = '5'
+    }
+    if (ge == 6) {
+      c = '6'
+    }
+    if (ge == 7) {
+      c = '7'
+    }
+    if (ge == 8) {
+      c = '8'
+    }
+    if (ge == 9) {
+      c = '9'
+    }
+    return c
+  }
+  function itob(n) {
+    var str = ''
+    if (n < 0) {
+      n = n - (n * 2)
+      do {
+          var ge = n % 10
+          str = numberToChar(ge) + str
+          n = (n - ge) / 10
+      } while (n > 0)
+      return console.log('-' + str)
+    } else {
+      do {
+        var ge = n % 10
+        str = numberToChar(ge) + str
+        n = (n - ge) / 10
+      } while (n > 0)
+      return console.log(str)
+    }
+  }
+  var n = +prompt()
+  itob(n)
+</script>
+
+
+
+<script id="lcf&lcm">
+  function littlestCommonMultiple(m, n) {
+    return m * n / largestCommonFactor(m, n)
+  }
+  function largestCommonFactor(m, n) {
+    do {
+      var r = m % n
+      m = n
+      n = r
+    } while (r != 0)
+    return m
+  }
+  var m = +prompt()
+  var n = +prompt()
+  console.log(largestCommonFactor(m, n),littlestCommonMultiple(m, n))
 </script>
